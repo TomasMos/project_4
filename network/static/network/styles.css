@@ -1,0 +1,35 @@
+.body {
+    margin: 40px
+}
+
+.card {
+    /* margin: 40px; */
+    /* border-color: gray; */
+    /* border-style: solid; */
+    padding: 25px;
+    margin-bottom: 25px
+}
+
+.list-group {
+    margin-top: 20px
+}
+
+#timestamp {
+    color: gray;
+}
+
+nav {
+    margin-top: 25px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+/* #hun {
+    background-color: black;
+} */
+
+#follow {
+    width: 100px
+}

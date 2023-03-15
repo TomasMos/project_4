@@ -1,0 +1,32 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <h1>Feed</h1>
+    <div>
+        <ul class="list-group">
+        {% for post in all_posts %}
+
+            <li class="list-group-item">
+                <a href="{% url 'profile' user_id=post.author.id%}"><strong>{{ post.author }} </strong></a>
+                <p> {{ post.body }} </p>
+                <hr>
+                <p id="timestamp"> {{ post.created }} </p>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {% if all_posts.has_previous%}
+                    <li class="page-item"><a class="page-link" href="?page={{all_posts.previous_page_number}}">Previous</a></li>
+                    {% endif %}
+                {% if all_posts.has_next%}
+                    <li class="page-item"><a class="page-link" href="?page={{all_posts.next_page_number}}">Next</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+
+
+
+{% endblock %}
